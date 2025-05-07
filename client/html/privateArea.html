@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome User</title>
+    <link href="../css/privateArea.css" rel="stylesheet">
+    <link href="../css/manager.css" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="top-buttons">
+            <button id="logoutButton">התנתק</button>
+            <button id="beakButton">חזרה לדף הבית</button>
+        </div>
+        <h1 id="welcomeMessage">ברוך הבא</h1>
+    </div>
+    
+    <div class="container">
+        <a href="form.html" class="button">הזמן חבילת צילומים</a>
+    </div>
+     
+    <!-- <div id="showing">
+        <button type="button" id="fetchOrdersBtn">כל ההזמנות</button>
+    </div> -->
+    
+    <div id="ordersList" class="hidden">
+        <h1 class="listH1">רשימת הזמנות</h1>
+        <table id="orderTable">
+            <thead>
+                <tr>
+                    <th>name</th>
+                    <th>address</th>
+                    <th>phone</th>
+                    <th>date</th>
+                    <th>kind</th>
+                    <th>numOfChildren</th>
+                    <th>userId</th>
+                    <th>Actions</th> 
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be added here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="../js/privateArea.js"></script>
+</body>
+</html>

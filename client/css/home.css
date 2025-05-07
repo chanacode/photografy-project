@@ -1,0 +1,421 @@
+html, body 
+{
+    margin: 0; /* מסיר מרג'ין ברירת מחדל */
+    padding: 0; /* מסיר פדינג ברירת מחדל */
+    width: 100%; /* רוחב 100% */
+   
+    overflow-x:hidden; /* מסיר גלילה אופקית */
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'MyFont'; /* שם הפונט */
+    src: url('../fonts/CALISTBI.TTF') format('truetype'), /* תאם את הפורמט ל-ttf */
+         url('../fonts/ALGER.TTF') format('truetype'),
+         url('../fonts/GOUDOS.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* סגנון ל-navbar */
+.navbar {
+    position: fixed; /* קובע שה-navbar תהיה קבועה */
+    top: 0; /* ממקמת את ה-navbar בראש הדף */
+    left: 0; /* ממקמת את ה-navbar בצד שמאל של הדף */
+    width: 100%; /* קובע שה-navbar תתפרס על כל רוחב הדף */
+    background-color:#df9f9f;; /* צבע הרקע של ה-navbar (ורוד) */
+    color: white; /* צבע הטקסט של הקישורים */
+    padding: 15px 20px; /* רווח פנימי סביב הטקסט */
+    display: flex; /* מציג את התכנים בשורה */
+    align-items: center; /* ממקם את התכנים במרכז ה-navbar מבחינת גובה */
+    z-index: 1000; /* מבטיח שה-navbar תהיה מעל תוכן אחר */
+    justify-content: center; /* ממקם את התוכן במרכז הנאב */
+    height: 40px;
+    border-bottom: 3px solid rgb(241, 167, 180);
+    font-family: 'MyFont'; /* השתמש בפונט שהגדרת */
+}
+
+.navbar .logo {
+    flex: 1; /* לוגו תופס את המקום בצד השמאלי */
+    position: absolute;
+    left: 20px; /* מרווח מהצד השמאלי */
+}
+
+.navbar .logo img {
+    height: 30px; /* גובה הלוגו */
+    margin-left: 200px;
+}
+
+.navbar .nav-links {
+    flex: 2; /* קישורים תופסים מקום יותר גדול */
+    display: flex; /* מציג את הקישורים בשורה */
+    justify-content: center; /* ממקם את הקישורים במרכז */
+    display: flex; /* מציג את הקישורים בשורה */
+    gap: 20px; /* מרווח בין הקישורים */
+    position: relative; /* מאפשר למרכז את התוכן עם justify-content */
+    left: 60px; /* מיקום יחסית למרכז כדי לחשב את רוחב הלוגו */
+    font-weight: bold;
+    margin-left: 15%;
+}
+
+.navbar a {
+    color: white; /* צבע הטקסט של הקישורים */
+    text-decoration: none; /* מסיר קו תחתון מהקישורים */
+    margin: 0 20px; /* מרווח בין הקישורים */
+    font-size: 18px; /* גודל הטקסט של הקישורים */
+}
+
+.navbar a:hover {
+    text-decoration:none; /* קו תחתון כשמרחפים על הקישור */
+}
+
+
+
+.contact 
+{
+    color: white;
+    margin-left: auto;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.contact:hover 
+{
+    background-color: darkpink; /* צבע ורוד כהה */
+}
+
+#mainImage
+{
+    height:10%;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+#sectionBabies1 
+{
+    display: flex; /* מאפשר לתמונות להיות זו לצד זו */
+    position: relative; /* מאפשר שימוש ב-position על התמונות */
+    overflow: hidden; /* מונע מהתמונות להרחיב את ה-div */
+}
+
+#sectionBabies1 img 
+{
+    height: 900px; /* קובע גובה קבוע לתמונה בצורה מלבנית מאונכת */
+    width: auto; /* שומר על הפרופורציות של התמונות */
+    position: relative; /* מאפשר לתמונה להתמקם על פני התמונות האחרות */
+    top: -130px; /* משנה את המיקום אנכית, תוכל לשנות ערך זה כדי לקבוע עד כמה התמונה תיכנס פנימה */
+    max-width: 25%; /* שומר על רוחב מקסימלי של 25% */
+    object-fit: cover; /* מבטיח שהתמונה תכסה את הממדים שהגדרת */
+    display: block; /* מבטל בעיות של מרג'ין */
+}
+
+
+
+#sectionWriten
+{
+    display: flex;
+    height: 150px;
+   
+}
+
+#sectionWriten h1
+{
+    background-color: rgb(248, 160, 189);
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    width: 40%;
+  height:40%;
+    color: white;
+    margin-left:27%;
+}
+
+#sectionBabies2
+{
+    display: flex;
+    justify-content: space-evenly;
+   flex-wrap: nowrap;
+   
+}
+
+#sectionBabies2 img
+{
+    width: 25%;
+    height: 30%;
+}
+
+.message 
+{
+    margin-top: -72%;
+    position: absolute;
+    bottom: -200px;
+    left: 35%;
+    transform: translateX(-8%);
+    /* background-color: rgba(156, 117, 117, 0.2); */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 200px;
+    font-weight: bold;
+    opacity: 0;
+    transition: bottom 0.5s ease, opacity 0.5s ease;
+}
+
+.message.show 
+{
+    bottom: 350px;
+    opacity: 1;
+}
+.message1 
+{
+    position: absolute;
+   margin-top: -60px;
+    left: 35%;
+    transform: translateX(-1%);
+    /* background-color:rgba(156, 117, 117, 0.2); */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 40px;
+    text-align: center;
+    opacity: 0;
+    transition: bottom 0.5s ease, opacity 0.5s ease;
+    margin-left: -35px;
+}
+
+.message1.show 
+{
+    bottom: 50px;
+    opacity: 1;
+}
+
+.message2 
+{
+    position: absolute;
+    bottom: -200px;
+    left: 0%;
+    transform: translateX(-1%);
+    background-color: rgba(156, 117, 117, 0.2);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 20000px;
+    opacity: 0;
+    transition: bottom 0.5s ease, opacity 0.5s ease;
+}
+
+.message2.show 
+{
+    bottom: 5px;
+    opacity: 1;
+}
+/* בדוק אם הקוד הזה באמת ב-style.css ולא בקטע CSS אחר */
+.button {
+    text-decoration: none; /* מסיר את קו התחתון המובנה של קישורים */
+    display: inline-block; /* חשוב להציג את הכפתור */
+    cursor: pointer; /* משנה את הסמן לסמן יד */
+}
+
+.gallery-button {
+    background-color: white; /* צבע הרקע */
+    color: black; /* צבע הטקסט */
+    border: 2px solid black; /* גבול */
+    border-radius: 5px; /* קצוות מעוגלים */
+    padding: 10px 20px; /* מרווחים פנימיים */
+    text-align: center; /* מיישר את הטקסט במרכז הכפתור */
+}
+
+.gallery-button:hover {
+    background-color: #f0f0f0; /* צבע הרקע בזמן ריחוף */
+}
+
+
+.gallery-button:hover {
+    background-color: #f0f0f0; /* שינוי צבע רקע בזמן ריחוף */
+}
+
+
+.about-button 
+{
+    background-color: transparent;
+    color: black;
+    border: 2px solid black;
+    bottom: 10px;
+    left: 10px;
+}
+
+.about-button:hover 
+{
+    background-color: black;
+    color: white;
+}
+
+.image-container {
+    overflow: hidden; /* מסווה את התמונות שיצאו מהמסך */
+    width:100%; /* רוחב המיכל */
+    max-width: 1800px; /* רוחב מקסימלי */
+    position: relative;
+}
+
+.image-slider {
+    display: flex;
+    transition: transform 0.5s ease; /* אנימציה למעבר */
+}
+
+.image-slider img {
+    width: 33.33%; /* רוחב של כל תמונה (שלוש תמונות בשורה) */
+    flex-shrink: 0; /* מונע מהתמונות להתכווץ */
+}
+
+
+
+        .footer 
+        {
+            background-image: url('../images/תמונה\ תינוק\ 1.jpg'); /* הכנס כאן את כתובת התמונה שלך */
+            height: 80vh; /* גובה חצי מהמסך */
+            position: relative;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .overlay 
+        {
+            background-color: rgba(255, 192, 203, 0.5); /* ורוד בהיר שקוף */
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+        .text-content 
+        {
+            z-index: 2;
+            max-width: 30%;
+        }
+        .contact-form
+        {
+            z-index: 2;
+            max-width: 30%;
+            background-color: rgba(255, 233, 237, 0.7);
+            padding: 15px;
+            border-radius: 5px;
+            margin-left:85vh;
+        }
+        input[type="text"], input[type="email"],input[type="tel"] {
+            width: 50%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid  rgba(255, 213, 220, 0.7);;
+            border-radius: 5px;
+            font-size: 16px;
+            color: rgba(255, 213, 220, 0.7);
+        }
+        .submit-button {
+            background-color: pink;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .submit-button:hover {
+            background-color: #fab5d7;
+        }
+
+        #btn {
+            background-color: rgba(255, 213, 220, 0.7); /* רקע ורדרד שקוף */
+            color: rgba(255, 255, 255, 0.7); /* צבע טקסט לבן */
+            border: none; /* ללא גבול */
+            padding: 15px 30px; /* ריפוד פנימי */
+            border-radius: 5px; /* פינות מעוגלות */
+            font-size: 20px; /* גודל טקסט */
+            cursor: pointer; /* שינוי הסמן כאשר המעלים על הכפתור */
+            transition: background-color 0.3s; /* מעבר חלק על צבע הרקע */
+            margin-left: 45%;
+            margin-right: 40%;
+          margin-bottom: 4px;
+          margin-top: 4px;
+          text-align: center;
+        }
+        
+        #btnGallery:hover {
+            background-color: rgba(255, 216, 235, 0.9); /* צבע רקע מעט כהה יותר כשמעלים על הכפתור */
+        }
+#linkRegister
+{
+    margin-right: 20%;
+    font-weight: bold;
+}
+
+#input_phone
+{
+    direction: rtl;
+}
+
+h3
+{
+    font-size: 40px;
+}
+
+p
+{
+    font-size:17.5px;
+}
+
+
+#divStories {
+    display: flex;
+    height: 500px; /* גובה גדול יותר, תוכל לשנות לפי הצורך */
+    width: 100%;
+}
+
+.right-section {
+    flex: 1;
+    background-color: rgb(228, 171, 181); /* צבע ורוד */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* ריפוד מסביב לטקסט */
+    box-sizing: border-box;
+    position: relative;
+    text-align: center; /* למרכז את הטקסט */
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-line {
+    font-size: 100px; /* גודל טקסט גדול */
+    font-weight: bold;
+    margin: 5px 0; /* רווח בין השורות */
+    color: white;
+}
+
+.heart {
+    font-size: 72px; /* גודל הלב */
+    margin-top: 10px; /* רווח מעל הלב */
+    color: white; /* צבע הלב לבן */
+}
+
+.left-section {
+    flex: 2;
+    overflow: hidden;
+}
+
+.left-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

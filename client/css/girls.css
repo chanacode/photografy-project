@@ -1,0 +1,63 @@
+html, body {
+    margin: 0; /* מסיר מרג'ין ברירת מחדל */
+    padding: 0; /* מסיר פדינג ברירת מחדל */
+    width: 100%; /* רוחב 100% */
+   
+    overflow-x: hidden; /* מסיר גלילה אופקית */
+}
+
+
+        body {
+            margin: 0;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    overflow-x: hidden; /* מסיר גלילה אופקית */
+
+        }
+        .navbar {
+            background-color: #f4bfbf;
+            color: white;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .navbar2
+        {
+            background-color:  #f4bfbf;
+            color: white;
+            padding: 0;
+            text-align: center;
+        }
+       /* עיצוב עבור כל התמונות בתוך .navbar ו-.navbar2 */
+
+.navbar img, .navbar2 img 
+{
+    height: 50px; /* גובה הלוגו */
+    vertical-align: baseline;
+    align-items: end;
+}
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px; /* ללא מרווחים בין התמונות */
+            padding: 0;
+            /* overflow-y: auto; אפשרות לגלול למטה */
+            height: calc(100vh - 60px); /* גובה הגלריה ייקח את כל המסך חוץ מה Navbar */
+        }
+        .gallery img {
+            width: 100%; /* התמונה תתמלא את התיבה */
+            height: auto; /* גובה אוטומטי */
+            display: block; /* מבטל רווחים מתחת לתמונה */
+        }
+        
+        /* עיצוב רספונסיבי */
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr); /* 2 תמונות לרוחב בטלפונים */
+            }
+        }
+        @media (max-width: 480px) {
+            .gallery {
+                grid-template-columns: 1fr; /* תמונה אחת לרוחב בטלפונים קטנים */
+            }
+        }

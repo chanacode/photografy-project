@@ -1,0 +1,129 @@
+/* Resetting default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('../images/12.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.content {
+    background-color: white;
+    opacity: 0.5;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+h1 {
+    font-size: 200px;
+    color: #d36e6e;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.button {
+    background-color: #d36e6e;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 50px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #b34e4e;
+}
+
+button {
+    background-color: #d36e6e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #b34e4e;
+}
+
+#showing {
+    margin-top: 0.5%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#usersList, #ordersList {
+    display: none;
+    font-size: 0.9rem;
+    color: #d36e6e;
+    margin-top: 10px;
+    width: 40%;
+    max-width: 800px;
+}
+
+#userTable, #orderTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#userTable th, #userTable td, #orderTable th, #orderTable td {
+    border: 2px solid #ddd;
+    padding: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: white;
+    opacity: 0.5;
+}
+
+#userTable th, #orderTable th {
+    background-color: #f2f2f2;
+}
+
+#userTable td button, #orderTable td button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #f44336;
+    color: white;
+    cursor: pointer;
+}
+
+#userTable td button:hover, #orderTable td button:hover {
+    background-color: #d32f2f;
+}
+
+.hidden {
+    display: none;
+}
+
+.listH1
+{
+    font-size: 50px;
+    color: #d36e6e;
+    margin-bottom: 20px;
+}

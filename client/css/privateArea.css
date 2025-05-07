@@ -1,0 +1,142 @@
+/* Resetting default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('../images/IMG_2303-1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.header {
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 10px 0;
+    /* border-bottom: 1px solid #ddd; */
+    z-index: 1000;
+}
+
+.top-buttons {
+    margin-bottom: 20px;
+}
+
+#logoutButton, #beakButton {
+    background-color: #d36e6e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#logoutButton:hover, #beakButton:hover {
+    background-color: #b34e4e;
+}
+
+#welcomeMessage {
+    font-size: 2.5rem;
+    color: #d36e6e;
+    margin: 20px 0;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    margin-top: -300px; /* Leave space for the fixed header */
+}
+
+.button {
+    display: inline-block;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+#showing {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#fetchOrdersBtn {
+    background-color: #d36e6e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#fetchOrdersBtn:hover {
+    background-color: #bb4747;
+}
+
+#ordersList {
+    display: none; /* Assuming it is toggled via JavaScript */
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    margin: 20px auto;
+    opacity: 0.55;
+}
+
+.listH1 {
+    font-size: 1.5rem;
+    color: #d36e6e;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#orderTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#orderTable th, #orderTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#orderTable th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+#orderTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}

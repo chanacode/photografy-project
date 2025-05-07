@@ -1,0 +1,58 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <style>
+    /* סגנונות CSS */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .upload-form {
+      margin-top: 20px;
+    }
+    #main-image {
+      width: 80%;
+      max-width: 600px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Image Gallery</h1>
+  <img id="main-image" src="../images/12.jpg" alt="Main Image">
+  <div class="upload-form">
+    <input type="file" id="image-input">
+    <button onclick="uploadImage()">Change Image</button>
+  </div>
+
+  <script>
+    function uploadImage() {
+      const input = document.getElementById('image-input');
+      const file = input.files[0];
+      
+      if (!file) {
+        alert('Please select an image.');
+        return;
+      }
+
+      const formData = new FormData();
+      formData.append('mainImage', file);
+
+      fetch('http://localhost:3000/ifMaster', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('main-image').src = data.imagePath;
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+    }
+  </script>
+</body>
+</html>

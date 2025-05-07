@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>דף המנהל</title>
+    <link rel="stylesheet" href="../css/manager.css"> <!-- השתמש בנתיב מוחלט -->
+</head>
+<body>
+    <div class="content">
+        <h1>DIRECTOR</h1>
+    </div>
+
+    <!-- <div class="buttons">
+        <a href="contact.html" class="button">לרשימת הפניות</a>
+        <a href="upload.html" id="addToGalleryForm" class="button"> להעלאת תמונה לגלריה </a>
+        
+            <input type="file" id="imageInput" name="image" accept="image/*" required>
+            <button type="submit">העלה תמונה חדשה</button>
+        </form>
+        <a href="change-image.html" id="updateHomepageForm" class="button"> לשינוי התמונה הראשית </a>
+    </div> -->
+
+    <form id="uploadForm" enctype="multipart/form-data">
+
+    </form>
+    <div id="showing">
+        <div id="searchUser">
+            <input type="text" id="searchPasswordInput" placeholder="הזן סיסמה">
+            <button type="button" id="searchUserBtn">חפש משתמש לפי סיסמה</button>
+        </div>
+        <button type="button" id="fetchUsersBtn">כל המשתמשים</button>
+        <button type="button" id="fetchOrdersBtn">כל ההזמנות</button>
+    </div>
+    
+    <div id="usersList" class="hidden">
+        <h1 class="listH1">רשימת משתמשים</h1>
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Password</th>
+                    <th>Mail</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be added here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <div id="ordersList" class="hidden">
+        <h1 class="listH1">רשימת הזמנות</h1>
+        <table id="orderTable">
+            <thead>
+                <tr>
+                    <th>name</th>
+                    <th>address</th>
+                    <th>phone</th>
+                    <th>date</th>
+                    <th>kind</th>
+                    <th>numOfChildren</th>
+                    <!-- <th>userId</th> -->
+                    <th>Actions</th> 
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be added here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="../js/meneger.js"></script>
+</body>
+</html>

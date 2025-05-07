@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link href="../css/signup.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Sign up</h1>
+        <form action="/signup" method="POST" id="fSignUp">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" pattern="[A-Za-z]+" title="Enter English letters only" required>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" 
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 characters" required>
+            </div>
+            <div>
+                <button type="submit">Sign Up</button>
+            </div>
+            <div>
+                Or <a href="../html/login.html">login</a>
+            </div>
+        </form>
+    </div>
+    <script src="../js/signup.js"></script>
+</body>
+</html>

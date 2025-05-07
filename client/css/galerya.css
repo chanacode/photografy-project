@@ -1,0 +1,127 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 192, 203, 0.5); /* ורוד בהיר שקוף */
+
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 עמודות */
+    grid-template-rows: repeat(2, 1fr); /* 2 שורות */
+    width: 80vw; /* רוחב 80% מהמסך */
+    height: 80vh; /* גובה 80% מהמסך */
+  
+}
+
+.button {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    color: black; /* צבע הכיתוב */
+    margin: 10px; /* מרווח בין הקישורים */
+}
+
+.button img {
+    width: 100%; /* תמונה ממלאה את הכפתור */
+    height: auto; /* שימור יחס ההיבט */
+    display: block;
+    transition: transform 0.3s;
+  
+}
+
+.button:hover img {
+    transform: scale(1.05); /* אפקט הגדלה בעת ריחוף */
+}
+
+ 
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+
+
+.text-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(227, 172, 172, 0.7);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 1px;
+    font-size: 18px;
+}
+
+
+.navbar {
+    position: fixed; /* קובע שה-navbar תהיה קבועה */
+    top: 0; /* ממקמת את ה-navbar בראש הדף */
+    left: 0; /* ממקמת את ה-navbar בצד שמאל של הדף */
+    width: 100%; /* קובע שה-navbar תתפרס על כל רוחב הדף */
+    background-color: pink; /* צבע הרקע של ה-navbar (ורוד) */
+    color: white; /* צבע הטקסט של הקישורים */
+    padding: 15px 20px; /* רווח פנימי סביב הטקסט */
+    display: flex; /* מציג את התכנים בשורה */
+    align-items: center; /* ממקם את התכנים במרכז ה-navbar מבחינת גובה */
+    z-index: 1000; /* מבטיח שה-navbar תהיה מעל תוכן אחר */
+    justify-content: center; /* ממקם את התוכן במרכז הנאב */
+height: 50px;
+    border-bottom: 3px solid rgb(241, 167, 180);
+  
+}
+
+.navbar .logo {
+    flex: 1; /* לוגו תופס את המקום בצד השמאלי */
+    position: absolute;
+    left: 20px; /* מרווח מהצד השמאלי */
+}
+
+.navbar .logo img {
+    height: 40px; /* גובה הלוגו */
+    
+}
+
+.navbar .nav-links {
+    flex: 2; /* קישורים תופסים מקום יותר גדול */
+    display: flex; /* מציג את הקישורים בשורה */
+    justify-content: center; /* ממקם את הקישורים במרכז */
+    display: flex; /* מציג את הקישורים בשורה */
+    gap: 20px; /* מרווח בין הקישורים */
+    position: relative; /* מאפשר למרכז את התוכן עם justify-content */
+    left: 60px; /* מיקום יחסית למרכז כדי לחשב את רוחב הלוגו */
+}
+
+.navbar a {
+    color: white; /* צבע הטקסט של הקישורים */
+    text-decoration: none; /* מסיר קו תחתון מהקישורים */
+    margin: 0 20px; /* מרווח בין הקישורים */
+    font-size: 18px; /* גודל הטקסט של הקישורים */
+}
+
+.navbar a:hover {
+    text-decoration: underline; /* קו תחתון כשמרחפים על הקישור */
+}
+
+
+
+.contact 
+{
+    margin-top: 10px;
+    color: white;
+    margin-left: auto;
+    text-decoration: none;
+    padding: 0 0;
+}
+
+.contact:hover 
+{
+    background-color: darkpink; /* צבע ורוד כהה */
+}
