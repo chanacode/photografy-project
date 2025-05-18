@@ -22,7 +22,7 @@ MongoDB (NoSQL database)
 
 Setup Instructions
 Clone the repository:
-git clone https://github.com/your-username/photography-scheduler.git
+git clone https://github.com/chanacode/photografy-project.git
 
 Navigate to the project folder:
 cd photography-scheduler
